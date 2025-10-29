@@ -1,0 +1,20 @@
+import tkinter as tk
+
+# Function to change font style
+def change_font():
+    label.config(font=("Arial", 18, "bold"))
+
+# Create main window
+root = tk.Tk()
+
+# Create label with desired text
+label = tk.Label(root, text="Hello, World!", font=("Helvetica", 14))
+
+# Add label to main window
+label.pack()
+
+# Create button to change font style
+button = tk.Button(root, text="Change Font", command=change_font)
+
+# Add button to main window
+button.pack()
