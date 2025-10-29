@@ -1,0 +1,45 @@
+import tkinter as tk
+
+# Create the main window
+root = tk.Tk()
+root.title("Text-Box Input")
+
+# Create labels and text-boxes
+label1 = tk.Label(root, text="Enter value 1:")
+entry1 = tk.Entry(root)
+
+label2 = tk.Label(root, text="Enter value 2:")
+entry2 = tk.Entry(root)
+
+label3 = tk.Label(root, text="Enter value 3:")
+entry3 = tk.Entry(root)
+
+# Set the size of the text-boxes
+entry1.config(width=30)
+entry2.config(width=30)
+
+entry3.config(width=30)
+
+# Create a function to get the values entered in the text-boxes
+def get_values():
+    val1 = entry1.get()
+    val2 = entry2.get()
+    val3 = entry3.get()
+    print("Value 1:", val1)
+    print("Value 2:", val2)
+    print("Value 3:", val3)
+
+# Create a button to submit the values entered in the text-boxes
+submit_button = tk.Button(root, text="Submit", command=get_values)
+
+# Add the labels, text-boxes, and button to the main window
+label1.pack()
+entry1.pack()
+label2.pack()
+entry2.pack()
+label3.pack()
+entry3.pack()
+submit_button.pack()
+
+# Run the main event loop
+root.mainloop()
